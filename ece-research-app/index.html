@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ECE Research</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="logo" id="logo"><span>LOGO</span></div>
+    <div><b id="dept"></b><br><span>Research</span></div>
+  </header>
+
+  <section class="hero">
+    <h1 id="headline"></h1>
+    <p id="tagline"></p>
+    <form class="search" role="search" onsubmit="return false">
+      <input id="q" type="search" placeholder="Search by title, student, adviser, or topic" aria-label="Search research">
+      <select id="yr" aria-label="Filter by year"><option value="">All years</option></select>
+    </form>
+  </section>
+
+  <div class="main">
+    <div class="panel">
+      <section class="view" id="v-archive">
+        <h2>Research archive</h2>
+        <div class="chips" id="fields"></div>
+        <p class="count" id="count" aria-live="polite"></p>
+        <div class="list" id="list"></div>
+      </section>
+
+      <section class="view" id="v-achievements" hidden>
+        <h2>Achievements</h2>
+        <p class="sub">Awards and recognitions won by the ECE research team.</p>
+        <div class="cards" id="awards"></div>
+      </section>
+
+      <section class="view" id="v-expo" hidden>
+        <h2>Annual Expo</h2>
+        <p class="sub" id="esum"></p>
+        <div class="tabs" role="tablist" id="etabs"></div>
+        <div class="grid" id="egrid"></div>
+      </section>
+    </div>
+
+    <nav class="nav" aria-label="Research sections">
+      <button class="navbtn" id="n-archive" data-v="archive">Research Archive <i>&rarr;</i></button>
+      <button class="navbtn" id="n-achievements" data-v="achievements">Achievements <i>&rarr;</i></button>
+      <button class="navbtn" id="n-expo" data-v="expo">Annual Expo <i>&rarr;</i></button>
+    </nav>
+  </div>
+  <footer id="foot">Sample entries shown. Edit data.js to add your own.</footer>
+</div>
+<div class="lb" id="lb" hidden><img id="lbimg" alt=""></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
